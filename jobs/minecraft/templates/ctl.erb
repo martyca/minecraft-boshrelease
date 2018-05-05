@@ -14,9 +14,21 @@ case $1 in
 
     export PATH=/var/vcap/packages/open_jdk/jdk-10.0.1/bin:$PATH
     export MINECRAFT_DIR=/var/vcap/packages/minecraft
-    export WORLD_DIR=/var/vcap/sys/world
+
+    if [ ! -d "/var/vcap/store" ]; then
+      export WORLD_DIR=/var/vcap/sys/world
+    else
+      export WORLD_DIR=/var/vcap/store/world
+      if [ -d "/var/vcap/sys/world" ]
+      then
+        mv /var/vcap/sys/world /var/vcap/store/
+      else
+        mkdir -p ${WORLD_DIR}
+      fi
+    fi
     export EULA="${WORLD_DIR}/eula.txt"
     export PROPERTIES="${WORLD_DIR}/server.properties"
+
 
 
     if [ ! -d "${WORLD_DIR}" ]; then
