@@ -1,0 +1,31 @@
+---
+name: minecraft
+
+releases:
+- name: minecraft
+  version: latest
+
+stemcells:
+- alias: ubuntu
+  os: ubuntu-trusty
+  version: latest
+
+instance_groups:
+- name: minecraft
+  instances: 1
+  azs: [ z1 ]
+  vm_type: default
+  stemcell: ubuntu
+  persistent_disk: 1024
+  networks:
+  - name: default
+  jobs:
+  - name: minecraft
+    release: minecraft
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  serial: false
+  canary_watch_time: 1000-60000
+  update_watch_time: 1000-60000
