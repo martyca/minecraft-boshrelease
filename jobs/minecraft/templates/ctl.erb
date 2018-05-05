@@ -27,6 +27,9 @@ case $1 in
     fi
     if [ ! -f "${PROPERTIES}" ]; then
     echo "online-mode=false" > ${PROPERTIES}
+    echo "server-port=<%= p('port') %>" >> ${PROPERTIES}
+    else
+    sed -i 's/server-port=.*/server-port=<%= p('port') %>/' ${PROPERTIES}
     fi
     cd ${WORLD_DIR}
     exec java -Xmx1024M -Xms1024M -jar ${MINECRAFT_DIR}/server.jar nogui \
