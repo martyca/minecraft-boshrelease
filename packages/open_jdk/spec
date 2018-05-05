@@ -1,0 +1,7 @@
+---
+name: open_jdk
+
+dependencies: []
+
+files:
+- open_jdk/openjdk-10.0.1_linux-x64_bin.tar.gz # from http://jdk.java.net/10/

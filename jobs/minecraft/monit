@@ -1,0 +1,5 @@
+check process minecraft
+  with pidfile /var/vcap/sys/run/minecraft/pid
+  start program "/var/vcap/jobs/minecraft/bin/ctl start"
+  stop program "/var/vcap/jobs/minecraft/bin/ctl stop"
+  group vcap

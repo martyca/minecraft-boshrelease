@@ -1,0 +1,3 @@
+set -e
+mkdir -p /opt/minecraft
+cp -a minecraft/* ${BOSH_INSTALL_TARGET}

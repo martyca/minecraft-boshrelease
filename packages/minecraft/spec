@@ -1,0 +1,8 @@
+---
+name: minecraft
+
+dependencies:
+- open_jdk
+
+files:
+- minecraft/server.jar # from https://minecraft.net/en-us/download/server

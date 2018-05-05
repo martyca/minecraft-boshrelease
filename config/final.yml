@@ -1,1 +1,6 @@
-name: minecraft-boshrelease
+---
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/mc_blobs
+final_name: minecraft

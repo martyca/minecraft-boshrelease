@@ -1,0 +1,47 @@
+#!/bin/bash
+
+RUN_DIR=/var/vcap/sys/run/minecraft
+LOG_DIR=/var/vcap/sys/log/minecraft
+PIDFILE=${RUN_DIR}/pid
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR $LOG_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+
+    echo $$ > $PIDFILE
+
+    export PATH=/var/vcap/packages/open_jdk/jdk-10.0.1/bin:$PATH
+    export MINECRAFT_DIR=/var/vcap/packages/minecraft
+    export WORLD_DIR=/var/vcap/sys/world
+    export EULA="${WORLD_DIR}/eula.txt"
+    export PROPERTIES="${WORLD_DIR}/server.properties"
+
+
+    if [ ! -d "${WORLD_DIR}" ]; then
+      mkdir -p ${WORLD_DIR}
+    fi
+    if [ ! -f "${EULA}" ]; then
+    echo "eula=true" > ${EULA}
+    fi
+    if [ ! -f "${PROPERTIES}" ]; then
+    echo "online-mode=false" > ${PROPERTIES}
+    fi
+    cd ${WORLD_DIR}
+    exec java -Xmx1024M -Xms1024M -jar ${MINECRAFT_DIR}/server.jar nogui \
+      >>  $LOG_DIR/minecraft.stdout.log \
+      2>> $LOG_DIR/minecraft.stderr.log
+
+    ;;
+
+  stop)
+    kill -9 `cat $PIDFILE`
+    rm -f $PIDFILE
+
+    ;;
+
+  *)
+    echo "Usage: ctl {start|stop}" ;;
+
+esac

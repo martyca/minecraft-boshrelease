@@ -1,0 +1,14 @@
+---
+name: minecraft
+
+templates:
+  ctl.erb: bin/ctl
+
+packages:
+- open_jdk
+- minecraft
+
+properties:
+   port:
+     description: Port that minecraft listens on
+     default: 25565
