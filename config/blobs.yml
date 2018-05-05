@@ -1,6 +1,8 @@
 minecraft/server.jar:
   size: 30222121
+  object_id: a355c8b2-6200-4002-6b59-3972173418bd
   sha: 886945bfb2b978778c3a0288fd7fab09d315b25f
 open_jdk/openjdk-10.0.1_linux-x64_bin.tar.gz:
   size: 204885801
+  object_id: f35a1ee6-29e2-4d7d-41ca-cb3a5186417f
   sha: 1377697996cad66def4f6627d13a031a26af9b7c

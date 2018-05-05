@@ -1,6 +1,8 @@
 ---
 blobstore:
-  provider: local
+  provider: s3
   options:
-    blobstore_path: /tmp/mc_blobs
+    bucket_name: minecraft-release
+    region: eu-west-1
+    endpoint: https://s3-eu-west-1.amazonaws.com
 final_name: minecraft
