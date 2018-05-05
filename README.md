@@ -28,7 +28,9 @@ cd minecraft-boshrelease
 #### 0.1 Quick Start: Upload release to BOSH Director
 
 ```bash
-bosh -e vbox upload-release https://github.com/martyca/minecraft-boshrelease.git
+git clone https://github.com/martyca/minecraft-boshrelease.git
+cd minecraft-boshrelease
+bosh -e vbox upload-release
 ```
 
 #### 0.2 Quick Start: deploy
@@ -38,3 +40,13 @@ bosh -e vbox upload-release https://github.com/martyca/minecraft-boshrelease.git
 ```bash
 bosh -e vbox -d minecraft deploy manifests/minecraft-lite.yml
 ```
+#### 0.3 Quick Start: test
+
+list running vm's
+```
+bosh -e vbox -d minecraft vms
+```
+
+Start your minecraft client
+select multiplayer, direct connection.
+copy ip of vm.
