@@ -1,10 +1,6 @@
 # BOSH-deployed minecraft Server
 
-This [BOSH](https://bosh.io/) release deploys aminecraft server.
-
-```
-user nobody vcap; # group vcap can read most directories
-```
+This [BOSH](https://bosh.io/) release deploys a minecraft server.
 
 ### 0. Quick Start
 
