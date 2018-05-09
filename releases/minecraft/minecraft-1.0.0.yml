@@ -1,0 +1,25 @@
+name: minecraft
+version: 1.0.0
+commit_hash: f08a0dd
+uncommitted_changes: false
+jobs:
+- name: minecraft
+  version: 13d99585cc415309c660a33ca8dae1b1d5f38404
+  fingerprint: 13d99585cc415309c660a33ca8dae1b1d5f38404
+  sha1: d14d93d986cdcebe0cd819bd8d06a35293b4cc94
+packages:
+- name: minecraft
+  version: 4e7f486cffa02dfd5d805a9bfc6157c521f1a180
+  fingerprint: 4e7f486cffa02dfd5d805a9bfc6157c521f1a180
+  sha1: a450bb3be2ecec1c97994b449a3c1821a0430531
+  dependencies:
+  - open_jdk
+- name: open_jdk
+  version: 471f3f9fad9b75798b678051e76f9211d3c343a9
+  fingerprint: 471f3f9fad9b75798b678051e76f9211d3c343a9
+  sha1: 63527c993d8a8fe4dc384925a4149c8d3f0c63ad
+  dependencies: []
+license:
+  version: 7e746d27c2335d3fa6d33c5d3d991dac93f45a22
+  fingerprint: 7e746d27c2335d3fa6d33c5d3d991dac93f45a22
+  sha1: a1b21af940a82665eb12a24f7c59312abfb2f7a5
