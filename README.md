@@ -1,6 +1,6 @@
 # BOSH-deployed minecraft Server
 
-This [BOSH](https://bosh.io/) release deploys a minecraft server.
+This [BOSH](https://bosh.io/) release deploys a minecraft server, this release is mostly for entertainment and eductational purposes.
 
 ### 0. Quick Start
 
