@@ -1,6 +1,6 @@
-name: minecraft
+name: minecraft_boshrelease_v1.0.0
 version: 1.0.0
-commit_hash: 6259c33
+commit_hash: 37c9f6f
 uncommitted_changes: false
 jobs:
 - name: minecraft
@@ -19,3 +19,7 @@ packages:
   fingerprint: 471f3f9fad9b75798b678051e76f9211d3c343a9
   sha1: 63527c993d8a8fe4dc384925a4149c8d3f0c63ad
   dependencies: []
+license:
+  version: 7e746d27c2335d3fa6d33c5d3d991dac93f45a22
+  fingerprint: 7e746d27c2335d3fa6d33c5d3d991dac93f45a22
+  sha1: a1b21af940a82665eb12a24f7c59312abfb2f7a5
