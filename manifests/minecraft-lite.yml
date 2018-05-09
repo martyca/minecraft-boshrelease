@@ -4,6 +4,7 @@ name: minecraft
 releases:
 - name: minecraft
   version: latest
+  url: https://github.com/martyca/minecraft-boshrelease/releases/download/V1.0.0/minecraft-release-1.0.0.tgz
 
 stemcells:
 - alias: ubuntu
