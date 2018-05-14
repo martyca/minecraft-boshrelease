@@ -1,6 +1,6 @@
 name: minecraft
 version: 1.0.0
-commit_hash: f08a0dd
+commit_hash: e52c260
 uncommitted_changes: false
 jobs:
 - name: minecraft
